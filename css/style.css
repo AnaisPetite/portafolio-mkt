@@ -402,3 +402,189 @@ body {
         height: 180px;
     }
 }
+
+/* ==========================================================================
+   10. ESTILOS DE LA VISTA DE CONTACTO
+   ========================================================================== */
+
+/* Distribución en 2 columnas */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 36px;
+    align-items: center;
+}
+
+.contact-left {
+    text-align: left;
+}
+
+/* Grupos y etiquetas del formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.form-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* Cajas de texto (Inputs y Textarea) */
+.form-input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 13.5px;
+    color: #0f172a;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: #94a3b8;
+}
+
+/* Efecto cuando haces clic dentro del campo */
+.form-input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* Botón "Enviar mensaje" */
+.btn-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    margin-top: 4px;
+}
+
+.btn-submit:hover {
+    background-color: #4338ca;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+}
+
+.btn-send-icon {
+    width: 16px;
+    height: 16px;
+    stroke: #ffffff;
+}
+
+/* COLUMNA DERECHA: ILUSTRACIÓN Y EMAIL DIRECTO */
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.contact-illustration {
+    width: 100%;
+    max-width: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Tarjeta lila de correo directo */
+.direct-email-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #f5f3ff;
+    border: 1px solid #e0e7ff;
+    border-radius: 14px;
+    padding: 16px 18px;
+    width: 100%;
+    text-align: left;
+}
+
+.email-icon-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #e0e7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.email-icon-circle svg {
+    width: 18px;
+    height: 18px;
+    stroke: #4f46e5;
+}
+
+.email-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.email-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.email-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: #4f46e5;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+.email-note {
+    font-size: 11px;
+    color: #64748b;
+}
+
+/* RESPONSIVE PARA CONTACTO EN CELULARES */
+@media (max-width: 680px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .contact-illustration {
+        max-width: 180px;
+    }
+}
