@@ -9,6 +9,9 @@
     <!-- Enlace a los estilos CSS -->
     <link rel="stylesheet" href="css/style.css?v=2">
 
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Tipografía Outfit desde Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +21,10 @@
 <body>
 
     <!-- TARJETA CONTENEDORA PRINCIPAL -->
-    <main class="card card-wide">
+    <main class="card card-wide" data-aos="fade-up" data-aos-duration="800">
 
         <!-- 1. MENÚ DE NAVEGACIÓN -->
-        <nav class="navbar">
+        <nav class="navbar" data-aos="fade-down" data-aos-delay="100">
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
@@ -32,7 +35,7 @@
         <div class="contact-layout">
 
             <!-- COLUMNA IZQUIERDA: FORMULARIO -->
-            <div class="contact-left">
+            <div class="contact-left" data-aos="fade-right" data-aos-delay="200">
 
                 <!-- Encabezado -->
                 <header class="page-header">
@@ -78,7 +81,7 @@
                 </form>
             </div>
             <!-- COLUMNA DERECHA: ILUSTRACIÓN Y EMAIL DIRECTO -->
-            <div class="contact-right">
+            <div class="contact-right" data-aos="fade-left" data-aos-delay="300">
 
                 <!-- Ilustración del sobre -->
                 <div class="contact-illustration">
@@ -108,6 +111,16 @@
         </div> <!-- Fin de contact-layout -->
 
     </main>
+
+    <!-- Script de AOS Library e inicialización -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-cubic'
+        });
+    </script>
 
 </body>
 

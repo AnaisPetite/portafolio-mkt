@@ -9,6 +9,9 @@
     <!-- Vinculación del archivo CSS externo -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Tipografía Outfit desde Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +21,10 @@
 <body>
 
     <!-- CONTENEDOR CENTRAL (TARJETA) -->
-    <main class="card">
+    <main class="card" data-aos="fade-up" data-aos-duration="800">
 
         <!-- 1. MENÚ DE NAVEGACIÓN -->
-        <nav class="navbar">
+        <nav class="navbar" data-aos="fade-down" data-aos-delay="100">
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
@@ -30,12 +33,12 @@
         </nav>
 
         <!-- 2. FOTO DE PERFIL / AVATAR -->
-        <div class="avatar-container">
+        <div class="avatar-container" data-aos="zoom-in" data-aos-delay="200">
             <img src="img/avatar.jpeg" alt="Foto de perfil de Anaís Cruz" class="avatar-img">
         </div>
 
         <!-- 3. INFORMACIÓN PERSONAL Y BIOGRAFÍA -->
-        <header class="profile-info">
+        <header class="profile-info" data-aos="fade-up" data-aos-delay="300">
             <h1 class="profile-name">Anaís Cruz</h1>
             <p class="profile-role">Estudiante de Marketing Digital</p>
 
@@ -49,7 +52,7 @@
         </header>
 
         <!-- 4. BOTONES DE REDES SOCIALES -->
-        <section class="social-links">
+        <section class="social-links" data-aos="fade-up" data-aos-delay="400">
             <a href="https://www.instagram.com/anais.ignxcia?igsi=cTJwZXExZHdscWJ1&utm_source=qr" target="_blank"
                 rel="noopener noreferrer" class="btn-link">
                 <!-- Icono SVG de Instagram -->
@@ -86,6 +89,16 @@
         </section>
 
     </main>
+
+    <!-- Script de AOS Library e inicialización -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-cubic'
+        });
+    </script>
 
 </body>
 

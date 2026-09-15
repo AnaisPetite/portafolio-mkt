@@ -9,6 +9,9 @@
     <!-- Enlace a tu hoja de estilos CSS -->
     <link rel="stylesheet" href="css/style.css?v=2">
 
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Tipografía Outfit desde Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +21,10 @@
 <body>
 
     <!-- TARJETA CONTENEDORA PRINCIPAL -->
-    <main class="card card-wide">
+    <main class="card card-wide" data-aos="fade-up" data-aos-duration="800">
 
         <!-- 1. MENÚ DE NAVEGACIÓN -->
-        <nav class="navbar">
+        <nav class="navbar" data-aos="fade-down" data-aos-delay="100">
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="proyectos.html" class="active">Proyectos</a></li>
@@ -29,7 +32,7 @@
             </ul>
         </nav>
         <!-- 2. ENCABEZADO DE LA PÁGINA -->
-        <header class="page-header">
+        <header class="page-header" data-aos="fade-up" data-aos-delay="150">
             <h1 class="page-title">Proyectos</h1>
             <div class="divider-left"></div>
             <p class="page-subtitle">Aquí algunos proyectos en los que he trabajado.</p>
@@ -38,7 +41,7 @@
         <section class="projects-list">
 
             <!-- PROYECTO 1 -->
-            <article class="project-card">
+            <article class="project-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="project-info">
                     <h2 class="project-title">Proyecto de Estrategia y Gestión Comercial</h2>
                     <p class="project-desc">
@@ -53,7 +56,7 @@
                 </div>
             </article>
             <!-- PROYECTO 2 -->
-            <article class="project-card">
+            <article class="project-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="project-info">
                     <h2 class="project-title">Agencia Brand Studio</h2>
                     <p class="project-desc">
@@ -70,7 +73,7 @@
                 </div>
             </article>
             <!-- PROYECTO 3 -->
-            <article class="project-card">
+            <article class="project-card" data-aos="fade-up" data-aos-delay="400">
                 <div class="project-info">
                     <h2 class="project-title">Plan de Marketing para index</h2>
                     <p class="project-desc">
@@ -89,6 +92,16 @@
         </section>
 
     </main>
+
+    <!-- Script de AOS Library e inicialización -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-cubic'
+        });
+    </script>
 
 </body>
 
