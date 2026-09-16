@@ -13,8 +13,9 @@
     --accent: #d48df0;           /* Acento decorativo (líneas y subrayados) */
     
     /* Fondo general y tarjeta */
-    --bg-page: #f8f6fc;          /* Fondo suave con matiz lila */
-    --card-bg: #ffffff;          /* Fondo blanco de la tarjeta */
+    --bg-page: #fdf2f8;          /* Fondo fallback */
+    --bg-gradient: linear-gradient(135deg, #fbcfe8 0%, #f5d0fe 35%, #e9d5ff 70%, #d8b4fe 100%);
+    --card-bg: rgba(255, 255, 255, 0.94); /* Fondo blanco semitransparente para legibilidad */
     
     /* Tipografía y textos */
     --text-main: #1e293b;        /* Títulos y texto principal */
@@ -38,7 +39,9 @@ html {
 
 body {
     font-family: 'Outfit', 'Arial', sans-serif;
-    background-color: var(--bg-page);
+    background: linear-gradient(135deg, #fbcfe8 0%, #f5d0fe 35%, #e9d5ff 70%, #d8b4fe 100%);
+    background-attachment: fixed;
+    background-size: cover;
     color: var(--text-main);
 
     /* CENTRADO CON FLEXBOX */
@@ -56,10 +59,13 @@ body {
    ========================================================================== */
 .card {
     background-color: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     width: 100%;
     max-width: 560px;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 15px 35px rgba(126, 34, 206, 0.08);
     padding: 36px 44px 44px 44px;
     text-align: center;
 }
